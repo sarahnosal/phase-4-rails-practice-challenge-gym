@@ -5,8 +5,7 @@ class ClientSerializer < ActiveModel::Serializer
   has_many :gyms
 
   def sum
-    
     charges = object.memberships.pluck(:charge)
     charges.sum()
-end
+  end
 end
